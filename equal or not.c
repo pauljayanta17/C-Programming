@@ -1,0 +1,44 @@
+#include<stdio.h>
+main()
+{
+	int n,t,p,c,h,i,s,r,q,r1,sr,ss,r2;
+	printf("Enter a number ");
+	scanf("%d",&n);
+	t=n;
+	c=0;
+	while(t>0)
+	{
+		c=c+1;
+		t=t/10;
+	}
+	h=c/2;
+	s=1;
+	for(i=1;i<=h;i++)
+	{
+		s=s*10;
+	}
+	r=n/s;
+	q=n%s;
+	sr=0;
+	while(r>0)
+	{
+		r1=r%10;
+		r=r/10;
+		sr=sr+r1;
+	}
+	ss=0;
+	while(q>0)
+	{
+		r2=q%10;
+		q=q/10;
+		ss=ss+r2;
+	}
+	if(sr==ss)
+	{
+		printf("Equal");
+	}
+	else
+	{
+		printf("Not equal");
+	}
+}
